@@ -32,11 +32,11 @@ const Navbar = ({ color }) => {
           <div className="flex items-center">
             <div className="text-2xl flex font-bold flex text-white items-center">
               <img
-                className="w-[9.45vw] h-[9.45vw] md:w-[3.20vw] md:h-[3.20vw]  object-cover rounded-full border-4 border-[#DAA520] mr-[5%]"
+                className="w-[9.45vw] h-[9.45vw]  md:w-[3.20vw] md:h-[3.20vw]  object-cover rounded-full border-4 border-[#DAA520] mr-[5%]"
                 src={`https://admin.artpallatte.com/${profile}`}
                 alt=""
               />
-              <span className={`text-[${color}]`}>{name}</span>
+              <span className={`md:text-[${color}] text-[black]`}>{name}</span>
             </div>
           </div>
 
