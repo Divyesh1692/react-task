@@ -74,7 +74,7 @@ const Achievements = () => {
       </div>
 
       {/* Mapping over the achievements and rendering the Achievement component */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 mx-auto   justify-center items-center    gap-8 mx-auto flex">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 mx-auto md:w-[85vw]  justify-center items-center    flex">
         {achievementsData.map((achievement, index) => (
           <Achievement
             key={index}

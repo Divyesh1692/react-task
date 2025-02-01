@@ -41,15 +41,22 @@ const About = () => {
   };
 
   const animateCounter = () => {
-    // let count = 0;
-    // const interval = setInterval(() => {
-    //   if (count < targetCount) {
-    //     count++;
-    //     setVisitorCount(count); // Update the state with the new count
-    //   } else {
-    //     clearInterval(interval); // Stop the animation when the target is reached
-    //   }
-    // }, 10); // Adjust speed (lower number = faster)
+    let start = 0;
+    const duration = 2000; // 2 seconds duration
+    const startTime = performance.now();
+
+    const updateCounter = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Progress between 0 and 1
+
+      setVisitorCount(Math.floor(progress * targetCount)); // Smoothly updates count
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    };
+
+    requestAnimationFrame(updateCounter);
   };
 
   useEffect(() => {
@@ -96,9 +103,14 @@ const About = () => {
                 alt=""
               />
               <div className="relative flex mt-[10%] text-[#006CA2] font-[600] text-[7.27vw] md:text-[2.78vw] mx-auto justify-center">
-                <h3>
+                <h3 className="flex items-center">
                   Total Visitors:{" "}
-                  <span id="visitor-counter">{visitorCount}</span>
+                  <span
+                    id="visitor-counter"
+                    className="inline-block w-[4ch] text-left pl-[2%]"
+                  >
+                    {visitorCount}
+                  </span>
                 </h3>
               </div>
             </div>

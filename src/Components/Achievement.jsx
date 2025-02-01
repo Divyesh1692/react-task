@@ -6,7 +6,7 @@ const Achievement = ({ img, title, date, desc }) => {
       <img
         src={`https://admin.artpallatte.com/${img}`}
         alt={title}
-        className="w-20 h-20 rounded-full"
+        className="w-20 h-20 rounded-full object-cover"
       />
       {/* <img
         src="/logos/achievementFrame.svg"
