@@ -1,0 +1,19 @@
+/* Customizing the pagination dots */
+.swiper-pagination-bullet {
+    background-color: rgba(75, 0, 130, 0.5); /* Set the color for inactive dots */
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  /* Active dot */
+  .swiper-pagination-bullet-active {
+    background-color: #4B0082 !important; /* Active dot color */
+    scale: 1.5;
+  }
+  
+  /* Optional: Add hover effect */
+  .swiper-pagination-bullet:hover {
+    background-color: #4B0082; /* Hover color */
+  }
+  
+  
