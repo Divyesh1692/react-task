@@ -20,7 +20,7 @@ const ArtGalleryCard = ({ artwork }) => {
   } = artwork;
 
   // WhatsApp Inquiry Link
-  const whatsappMessage = `I want to know more about "${title}" priced at ₹${price}.`;
+  const whatsappMessage = `I want to know more about this Art "${title}": https://admin.artpallatte.com/${mainImage}  priced at ₹${price}.`;
   const whatsappUrl = `https://wa.me/9157425585?text=${encodeURIComponent(
     whatsappMessage
   )}`;
@@ -87,7 +87,9 @@ const ArtGalleryCard = ({ artwork }) => {
         </div>
       </div>
       {/* Description */}
-      <p className="mt-0 p-2 h-20 text-gray-700 line-clamp-3  ">{description}</p>
+      <p className="mt-0 p-2 h-20 text-gray-700 line-clamp-3  ">
+        {description}
+      </p>
       {/* Inquiry Button */}
       <a
         href={whatsappUrl}
